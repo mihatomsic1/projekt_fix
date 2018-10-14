@@ -31,13 +31,17 @@ namespace liga
 
         private void izbrisiButton_Click(object sender, EventArgs e)
         {
-            int i = comboBox1.SelectedIndex + 1;
+
+            MySqlConnection con1 = new MySqlConnection("datasource = mysql6001.site4now.net; username = a41c3d_mihatom; password = fuzbal100; database = db_a41c3d_mihatom; sslmode=none");
+
+
+            int i = comboBox1.SelectedIndex + 3;
             comboBox1.Items.Remove(comboBox1.SelectedIndex);
-            con.Open();
-            MySqlCommand com = con.CreateCommand();
-            com.CommandType = CommandType.Text;
-            com.CommandText = "DELETE FROM ekipe WHERE id = '"+i+"' ";
-            com.ExecuteNonQuery();
+            con1.Open();
+            MySqlCommand com1 = con1.CreateCommand();
+            com1.CommandType = CommandType.Text;
+            com1.CommandText = "DELETE FROM ekipe WHERE id = '"+i+"' ";
+            com1.ExecuteNonQuery();
 
         }
 
@@ -56,6 +60,11 @@ namespace liga
             }
             com.Dispose();
             con.Close();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
