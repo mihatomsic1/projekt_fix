@@ -74,6 +74,7 @@
             this.igralciButton.TabIndex = 4;
             this.igralciButton.Text = "IGRALCI";
             this.igralciButton.UseVisualStyleBackColor = true;
+            this.igralciButton.Click += new System.EventHandler(this.igralciButton_Click);
             // 
             // Form1
             // 

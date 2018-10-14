@@ -24,5 +24,12 @@ namespace liga
             this.Hide();
             Ekipe.Show();
         }
+
+        private void igralciButton_Click(object sender, EventArgs e)
+        {
+            igralci igralci = new igralci();
+            igralci.Show();
+            this.Hide();
+        }
     }
 }
