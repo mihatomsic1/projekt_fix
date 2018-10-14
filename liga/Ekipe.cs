@@ -35,7 +35,7 @@ namespace liga
             MySqlConnection con1 = new MySqlConnection("datasource = mysql6001.site4now.net; username = a41c3d_mihatom; password = fuzbal100; database = db_a41c3d_mihatom; sslmode=none");
 
 
-            int i = comboBox1.SelectedIndex + 3;
+            int i = comboBox1.SelectedIndex + 1;
             comboBox1.Items.Remove(comboBox1.SelectedIndex);
             con1.Open();
             MySqlCommand com1 = con1.CreateCommand();
@@ -64,7 +64,40 @@ namespace liga
 
         private void updateButton_Click(object sender, EventArgs e)
         {
+             int i = comboBox1.SelectedIndex ;
+            urediEkipo urediEkipo = new urediEkipo();
+            urediEkipo.Show();
+            this.Hide();
+        }
 
+        private void izpisiButton_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con2 = new MySqlConnection("datasource = mysql6001.site4now.net; username = a41c3d_mihatom; password = fuzbal100; database = db_a41c3d_mihatom; sslmode=none");
+            int index = comboBox1.SelectedIndex;
+            con2.Open();
+            MySqlCommand com2 = con2.CreateCommand();
+            com2.CommandType = CommandType.Text;
+            com2.CommandText = "SELECT ime, naslov, leto_ustanovitve, trener FROM ekipe WHERE id = '" + index + "'";
+            com2.ExecuteNonQuery();
+
+            MySqlDataReader reader = com2.ExecuteReader();
+            while (reader.Read())
+            {
+                string ime = reader.GetString("ime");
+                string naslov = reader.GetString("naslov");
+                int leto_ustanovitve = reader.GetInt32("leto_ustanovitve");
+                string trener = reader.GetString("trener");
+
+
+                MessageBox.Show("Ime ekipe:" + ime + ", Mesto ekipe:" + naslov + ", Leto ustanovitve:" + leto_ustanovitve + ", Trener:" + trener + " ");
+            }
+        }
+
+        private void urediButton_Click(object sender, EventArgs e)
+        {
+            urediEkipo uredi = new urediEkipo();
+            uredi.Show();
+            this.Hide();
         }
     }
 }

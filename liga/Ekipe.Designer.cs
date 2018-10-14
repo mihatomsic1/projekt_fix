@@ -31,8 +31,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dodajButton = new System.Windows.Forms.Button();
             this.izbrisiButton = new System.Windows.Forms.Button();
-            this.updateButton = new System.Windows.Forms.Button();
             this.izpisiButton = new System.Windows.Forms.Button();
+            this.urediButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -63,32 +63,33 @@
             this.izbrisiButton.UseVisualStyleBackColor = true;
             this.izbrisiButton.Click += new System.EventHandler(this.izbrisiButton_Click);
             // 
-            // updateButton
-            // 
-            this.updateButton.Location = new System.Drawing.Point(185, 108);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(115, 23);
-            this.updateButton.TabIndex = 3;
-            this.updateButton.Text = "Posodobi ekipo";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
-            // 
             // izpisiButton
             // 
-            this.izpisiButton.Location = new System.Drawing.Point(185, 147);
+            this.izpisiButton.Location = new System.Drawing.Point(185, 97);
             this.izpisiButton.Name = "izpisiButton";
             this.izpisiButton.Size = new System.Drawing.Size(115, 23);
             this.izpisiButton.TabIndex = 4;
             this.izpisiButton.Text = "Izpisi ekipo";
             this.izpisiButton.UseVisualStyleBackColor = true;
+            this.izpisiButton.Click += new System.EventHandler(this.izpisiButton_Click);
+            // 
+            // urediButton
+            // 
+            this.urediButton.Location = new System.Drawing.Point(185, 133);
+            this.urediButton.Name = "urediButton";
+            this.urediButton.Size = new System.Drawing.Size(115, 23);
+            this.urediButton.TabIndex = 5;
+            this.urediButton.Text = "Posodobi";
+            this.urediButton.UseVisualStyleBackColor = true;
+            this.urediButton.Click += new System.EventHandler(this.urediButton_Click);
             // 
             // Ekipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 207);
+            this.ClientSize = new System.Drawing.Size(334, 168);
+            this.Controls.Add(this.urediButton);
             this.Controls.Add(this.izpisiButton);
-            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.izbrisiButton);
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.comboBox1);
@@ -104,7 +105,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button dodajButton;
         private System.Windows.Forms.Button izbrisiButton;
-        private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button izpisiButton;
+        private System.Windows.Forms.Button urediButton;
     }
 }
