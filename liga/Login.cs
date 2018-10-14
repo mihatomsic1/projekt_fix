@@ -49,7 +49,14 @@ namespace liga
                     Form1.Show();
                 }
             }
+
+        private void registracijaButton_Click(object sender, EventArgs e)
+        {
+            Registracija Registracija = new Registracija();
+            Registracija.Show();
+            this.Hide();
         }
+    }
     }
 
 
