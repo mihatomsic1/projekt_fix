@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace liga
 {
-    public partial class Form1 : Form
+    public partial class izbrisiEkipo : Form
     {
-        public Form1()
+        public izbrisiEkipo()
         {
             InitializeComponent();
- 
-        }
-
-        private void ekipeButton_Click(object sender, EventArgs e)
-        {
-            Ekipe Ekipe = new Ekipe();
-            this.Hide();
-            Ekipe.Show();
         }
     }
 }

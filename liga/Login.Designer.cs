@@ -80,11 +80,11 @@
             // 
             // registracijaButton
             // 
-            this.registracijaButton.Location = new System.Drawing.Point(28, 125);
+            this.registracijaButton.Location = new System.Drawing.Point(28, 124);
             this.registracijaButton.Name = "registracijaButton";
             this.registracijaButton.Size = new System.Drawing.Size(257, 23);
             this.registracijaButton.TabIndex = 5;
-            this.registracijaButton.Text = "Registriraj se!";
+            this.registracijaButton.Text = "Še niste prijavljeni? Registriraj se!";
             this.registracijaButton.UseVisualStyleBackColor = true;
             this.registracijaButton.Click += new System.EventHandler(this.registracijaButton_Click);
             // 

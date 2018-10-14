@@ -58,6 +58,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dodajEkipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dodajEkipo.Designer.cs">
+      <DependentUpon>dodajEkipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ekipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ekipe.Designer.cs">
+      <DependentUpon>Ekipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,12 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="izbrisiEkipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="izbrisiEkipo.Designer.cs">
+      <DependentUpon>izbrisiEkipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -84,6 +102,12 @@
     <Compile Include="Registracija.Designer.cs">
       <DependentUpon>Registracija.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dodajEkipo.resx">
+      <DependentUpon>dodajEkipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ekipe.resx">
+      <DependentUpon>Ekipe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
