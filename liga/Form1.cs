@@ -31,5 +31,11 @@ namespace liga
             igralci.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tekmovanja tekmovanja = new tekmovanja();
+            tekmovanja.Show();
+            this.Hide();       }
     }
 }
