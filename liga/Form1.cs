@@ -15,6 +15,7 @@ namespace liga
         public Form1()
         {
             InitializeComponent();
+            int c;
         }
     }
 }
