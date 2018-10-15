@@ -34,6 +34,7 @@
             this.izpisiButton = new System.Windows.Forms.Button();
             this.urediButton = new System.Windows.Forms.Button();
             this.nazajButton = new System.Windows.Forms.Button();
+            this.osveziButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -88,17 +89,28 @@
             // 
             this.nazajButton.Location = new System.Drawing.Point(30, 97);
             this.nazajButton.Name = "nazajButton";
-            this.nazajButton.Size = new System.Drawing.Size(75, 23);
+            this.nazajButton.Size = new System.Drawing.Size(121, 23);
             this.nazajButton.TabIndex = 6;
             this.nazajButton.Text = "Nazaj";
             this.nazajButton.UseVisualStyleBackColor = true;
             this.nazajButton.Click += new System.EventHandler(this.nazajButton_Click);
             // 
+            // osveziButton
+            // 
+            this.osveziButton.Location = new System.Drawing.Point(30, 68);
+            this.osveziButton.Name = "osveziButton";
+            this.osveziButton.Size = new System.Drawing.Size(121, 23);
+            this.osveziButton.TabIndex = 7;
+            this.osveziButton.Text = "Osvezi seznam";
+            this.osveziButton.UseVisualStyleBackColor = true;
+            this.osveziButton.Click += new System.EventHandler(this.osveziButton_Click);
+            // 
             // Ekipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 168);
+            this.ClientSize = new System.Drawing.Size(334, 177);
+            this.Controls.Add(this.osveziButton);
             this.Controls.Add(this.nazajButton);
             this.Controls.Add(this.urediButton);
             this.Controls.Add(this.izpisiButton);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Button izpisiButton;
         private System.Windows.Forms.Button urediButton;
         private System.Windows.Forms.Button nazajButton;
+        private System.Windows.Forms.Button osveziButton;
     }
 }

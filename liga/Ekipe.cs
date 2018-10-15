@@ -35,29 +35,15 @@ namespace liga
             MySqlConnection con1 = new MySqlConnection("datasource = mysql6001.site4now.net; username = a41c3d_mihatom; password = fuzbal100; database = db_a41c3d_mihatom; sslmode=none");
 
             /*****************/
-            int i = comboBox1.SelectedIndex + 1;
-            comboBox1.Items.Remove(comboBox1.SelectedIndex);
+            string text = Convert.ToString(comboBox1.SelectedItem);
+         
             con1.Open();
             MySqlCommand com1 = con1.CreateCommand();
             com1.CommandType = CommandType.Text;
-            com1.CommandText = "DELETE FROM ekipe WHERE id = '"+i+"' ";
+            com1.CommandText = "DELETE FROM ekipe WHERE ime = '"+text+"' ";
             com1.ExecuteNonQuery();
-
-
-            comboBox1.Items.Clear();
-            con.Open();
-            MySqlCommand com = con.CreateCommand();
-            com.CommandType = CommandType.Text;
-            com.CommandText = "SELECT ime FROM ekipe ";
-            com.ExecuteNonQuery();
-            MySqlDataReader reader = com.ExecuteReader();
-            while (reader.Read())
-            {
-                comboBox1.Items.Add(reader.GetString("ime"));
-            }
-            com.Dispose();
-            con.Close();
-
+            MessageBox.Show("Ekipa izbrisana!");
+            comboBox1.Text = "";
         }
 
         private void Ekipe_Load(object sender, EventArgs e)
@@ -120,6 +106,23 @@ namespace liga
             Form1 Form1 = new Form1();
             this.Hide();
             Form1.Show();
+        }
+
+        private void osveziButton_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            con.Open();
+            MySqlCommand com = con.CreateCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "SELECT ime FROM ekipe ";
+            com.ExecuteNonQuery();
+            MySqlDataReader reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader.GetString("ime"));
+            }
+            com.Dispose();
+            con.Close();
         }
     }
 }

@@ -13,6 +13,10 @@ namespace liga
 {
     public partial class dodajTekmo : Form
     {
+
+        MySqlConnection con = new MySqlConnection("datasource = mysql6001.site4now.net; username = a41c3d_mihatom; password = fuzbal100; database = db_a41c3d_mihatom; sslmode=none");
+
+
         public dodajTekmo()
         {
             InitializeComponent();
