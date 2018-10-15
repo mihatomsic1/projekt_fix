@@ -57,5 +57,12 @@ namespace liga
             com.Dispose();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ekipe ekipe = new Ekipe();
+            this.Hide();
+            ekipe.Show();
+        }
     }
 }

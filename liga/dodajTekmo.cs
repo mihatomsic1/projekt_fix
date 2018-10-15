@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace liga
 {
-    public partial class izbrisiEkipo : Form
+    public partial class dodajTekmo : Form
     {
-        public izbrisiEkipo()
+        public dodajTekmo()
         {
             InitializeComponent();
+        }
+
+        private void dodajButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

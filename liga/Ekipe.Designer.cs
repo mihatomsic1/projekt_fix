@@ -33,6 +33,7 @@
             this.izbrisiButton = new System.Windows.Forms.Button();
             this.izpisiButton = new System.Windows.Forms.Button();
             this.urediButton = new System.Windows.Forms.Button();
+            this.nazajButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -83,11 +84,22 @@
             this.urediButton.UseVisualStyleBackColor = true;
             this.urediButton.Click += new System.EventHandler(this.urediButton_Click);
             // 
+            // nazajButton
+            // 
+            this.nazajButton.Location = new System.Drawing.Point(30, 97);
+            this.nazajButton.Name = "nazajButton";
+            this.nazajButton.Size = new System.Drawing.Size(75, 23);
+            this.nazajButton.TabIndex = 6;
+            this.nazajButton.Text = "Nazaj";
+            this.nazajButton.UseVisualStyleBackColor = true;
+            this.nazajButton.Click += new System.EventHandler(this.nazajButton_Click);
+            // 
             // Ekipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 168);
+            this.Controls.Add(this.nazajButton);
             this.Controls.Add(this.urediButton);
             this.Controls.Add(this.izpisiButton);
             this.Controls.Add(this.izbrisiButton);
@@ -107,5 +119,6 @@
         private System.Windows.Forms.Button izbrisiButton;
         private System.Windows.Forms.Button izpisiButton;
         private System.Windows.Forms.Button urediButton;
+        private System.Windows.Forms.Button nazajButton;
     }
 }

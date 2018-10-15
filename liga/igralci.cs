@@ -62,6 +62,13 @@ namespace liga
             com.Dispose();
             con.Close();
         }
+
+        private void nazajButton_Click(object sender, EventArgs e)
+        {
+            Form1 Form1 = new Form1();
+            this.Hide();
+            Form1.Show();
+        }
     }
 }
 

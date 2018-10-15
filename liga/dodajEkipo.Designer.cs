@@ -37,6 +37,7 @@
             this.letoTextbox = new System.Windows.Forms.TextBox();
             this.trenerTextbox = new System.Windows.Forms.TextBox();
             this.dodajButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -113,11 +114,22 @@
             this.dodajButton.UseVisualStyleBackColor = true;
             this.dodajButton.Click += new System.EventHandler(this.dodajButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(40, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Nazaj";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dodajEkipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 181);
+            this.ClientSize = new System.Drawing.Size(303, 219);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.trenerTextbox);
             this.Controls.Add(this.letoTextbox);
@@ -145,5 +157,6 @@
         private System.Windows.Forms.TextBox letoTextbox;
         private System.Windows.Forms.TextBox trenerTextbox;
         private System.Windows.Forms.Button dodajButton;
+        private System.Windows.Forms.Button button1;
     }
 }

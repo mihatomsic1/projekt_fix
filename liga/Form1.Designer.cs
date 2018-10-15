@@ -90,7 +90,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.ekipeButton);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "GLAVNA STRAN";
             this.ResumeLayout(false);
             this.PerformLayout();
 

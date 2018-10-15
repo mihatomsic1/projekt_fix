@@ -25,17 +25,18 @@ namespace liga
             con.Open();
             MySqlCommand com = con.CreateCommand();
             com.CommandType = CommandType.Text;
-            com.CommandText = "SELECT e.ime, t.rezultat, t.datum_tekme FROM tekme t  INNER JOIN ekipe e  ON e.id = t.ekipa1_id";
+            //com.CommandText = "SELECT e.ime, t.rezultat, t.datum_tekme FROM tekme t  INNER JOIN ekipe e  ON e.id = t.ekipa1_id";
+            com.CommandText = "SELECT e.ime AS 'klub1', e1.ime AS 'klub2', t.rezultat, t.datum_tekme FROM tekme t  INNER JOIN ekipe e  ON e.id = t.ekipa1_id INNER JOIN ekipe e1 ON t.ekipa2_id = e1.id";
             com.ExecuteNonQuery();
             MySqlDataReader reader = com.ExecuteReader();
             while (reader.Read())
             {
-                //string ekipa1 = reader.GetString("e.ime");
-                //string ekipa2 = reader.GetString("e1.ime");
+                string ekipa1 = reader.GetString("klub1");
+                string ekipa2 = reader.GetString("klub2");
                 string rezultat = reader.GetString("rezultat");
                 string datum = reader.GetString("datum_tekme");
 
-                string tekma = rezultat + " "  + datum;
+                string tekma = ekipa1 + " " + rezultat + " " + ekipa2 + " " + datum;
 
                 //push to list
                 listBox1.Items.Add(tekma);
@@ -43,6 +44,20 @@ namespace liga
             }
             com.Dispose();
             con.Close();
+        }
+
+        private void nazajButton_Click(object sender, EventArgs e)
+        {
+            Form1 Form1 = new Form1();
+            this.Hide();
+            Form1.Show();
+        }
+
+        private void dodajButton_Click(object sender, EventArgs e)
+        {
+            dodajTekmo dodajTekmo = new dodajTekmo();
+            this.Hide();
+            dodajTekmo.Show();
         }
     }
 }

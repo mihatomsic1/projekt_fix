@@ -34,7 +34,7 @@ namespace liga
 
             MySqlConnection con1 = new MySqlConnection("datasource = mysql6001.site4now.net; username = a41c3d_mihatom; password = fuzbal100; database = db_a41c3d_mihatom; sslmode=none");
 
-
+            /*****************/
             int i = comboBox1.SelectedIndex + 1;
             comboBox1.Items.Remove(comboBox1.SelectedIndex);
             con1.Open();
@@ -42,6 +42,21 @@ namespace liga
             com1.CommandType = CommandType.Text;
             com1.CommandText = "DELETE FROM ekipe WHERE id = '"+i+"' ";
             com1.ExecuteNonQuery();
+
+
+            comboBox1.Items.Clear();
+            con.Open();
+            MySqlCommand com = con.CreateCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "SELECT ime FROM ekipe ";
+            com.ExecuteNonQuery();
+            MySqlDataReader reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader.GetString("ime"));
+            }
+            com.Dispose();
+            con.Close();
 
         }
 
@@ -98,6 +113,13 @@ namespace liga
             urediEkipo uredi = new urediEkipo();
             uredi.Show();
             this.Hide();
+        }
+
+        private void nazajButton_Click(object sender, EventArgs e)
+        {
+            Form1 Form1 = new Form1();
+            this.Hide();
+            Form1.Show();
         }
     }
 }
