@@ -69,6 +69,13 @@ namespace liga
             this.Hide();
             Form1.Show();
         }
+
+        private void dodajIgralcaButton_Click(object sender, EventArgs e)
+        {
+            dodajIgralca dodajIgralca = new dodajIgralca();
+            dodajIgralca.Show();
+            this.Hide();
+        }
     }
 }
 

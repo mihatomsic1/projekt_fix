@@ -39,7 +39,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(27, 40);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(158, 134);
+            this.listBox1.Size = new System.Drawing.Size(250, 134);
             this.listBox1.TabIndex = 0;
             // 
             // label1
@@ -54,7 +54,7 @@
             // 
             // nazajButton
             // 
-            this.nazajButton.Location = new System.Drawing.Point(30, 191);
+            this.nazajButton.Location = new System.Drawing.Point(27, 191);
             this.nazajButton.Name = "nazajButton";
             this.nazajButton.Size = new System.Drawing.Size(75, 23);
             this.nazajButton.TabIndex = 7;
@@ -66,7 +66,7 @@
             // 
             this.dodajButton.Location = new System.Drawing.Point(129, 191);
             this.dodajButton.Name = "dodajButton";
-            this.dodajButton.Size = new System.Drawing.Size(75, 23);
+            this.dodajButton.Size = new System.Drawing.Size(148, 23);
             this.dodajButton.TabIndex = 8;
             this.dodajButton.Text = "Dodaj tekmo";
             this.dodajButton.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 243);
+            this.ClientSize = new System.Drawing.Size(303, 243);
             this.Controls.Add(this.dodajButton);
             this.Controls.Add(this.nazajButton);
             this.Controls.Add(this.label1);

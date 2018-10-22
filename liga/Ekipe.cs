@@ -44,6 +44,21 @@ namespace liga
             com1.ExecuteNonQuery();
             MessageBox.Show("Ekipa izbrisana!");
             comboBox1.Text = "";
+
+            comboBox1.Items.Clear();
+            con.Open();
+            MySqlCommand com = con.CreateCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "SELECT ime FROM ekipe ";
+            com.ExecuteNonQuery();
+            MySqlDataReader reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader.GetString("ime"));
+            }
+            com.Dispose();
+            con.Close();
+
         }
 
         private void Ekipe_Load(object sender, EventArgs e)

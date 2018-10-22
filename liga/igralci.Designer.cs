@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.nazajButton = new System.Windows.Forms.Button();
+            this.dodajIgralcaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -70,11 +71,22 @@
             this.nazajButton.UseVisualStyleBackColor = true;
             this.nazajButton.Click += new System.EventHandler(this.nazajButton_Click);
             // 
+            // dodajIgralcaButton
+            // 
+            this.dodajIgralcaButton.Location = new System.Drawing.Point(132, 204);
+            this.dodajIgralcaButton.Name = "dodajIgralcaButton";
+            this.dodajIgralcaButton.Size = new System.Drawing.Size(104, 23);
+            this.dodajIgralcaButton.TabIndex = 8;
+            this.dodajIgralcaButton.Text = "Dodaj igralca";
+            this.dodajIgralcaButton.UseVisualStyleBackColor = true;
+            this.dodajIgralcaButton.Click += new System.EventHandler(this.dodajIgralcaButton_Click);
+            // 
             // igralci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 326);
+            this.Controls.Add(this.dodajIgralcaButton);
             this.Controls.Add(this.nazajButton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button nazajButton;
+        private System.Windows.Forms.Button dodajIgralcaButton;
     }
 }

@@ -64,6 +64,12 @@
     <Compile Include="dodajEkipo.Designer.cs">
       <DependentUpon>dodajEkipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="dodajIgralca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dodajIgralca.Designer.cs">
+      <DependentUpon>dodajIgralca.cs</DependentUpon>
+    </Compile>
     <Compile Include="dodajTekmo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="dodajEkipo.resx">
       <DependentUpon>dodajEkipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dodajIgralca.resx">
+      <DependentUpon>dodajIgralca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dodajTekmo.resx">
       <DependentUpon>dodajTekmo.cs</DependentUpon>

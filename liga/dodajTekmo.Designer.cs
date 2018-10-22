@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.dodajButton = new System.Windows.Forms.Button();
+            this.ekipa1combo = new System.Windows.Forms.ComboBox();
+            this.ekipa2combo = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -76,60 +76,66 @@
             this.label4.Text = "Datum tekme:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(169, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(169, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(169, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(169, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
-            // 
             // dodajButton
             // 
             this.dodajButton.Location = new System.Drawing.Point(33, 147);
             this.dodajButton.Name = "dodajButton";
-            this.dodajButton.Size = new System.Drawing.Size(236, 23);
+            this.dodajButton.Size = new System.Drawing.Size(358, 23);
             this.dodajButton.TabIndex = 8;
             this.dodajButton.Text = "Dodaj";
             this.dodajButton.UseVisualStyleBackColor = true;
             this.dodajButton.Click += new System.EventHandler(this.dodajButton_Click);
             // 
+            // ekipa1combo
+            // 
+            this.ekipa1combo.FormattingEnabled = true;
+            this.ekipa1combo.Location = new System.Drawing.Point(169, 30);
+            this.ekipa1combo.Name = "ekipa1combo";
+            this.ekipa1combo.Size = new System.Drawing.Size(222, 21);
+            this.ekipa1combo.TabIndex = 9;
+            // 
+            // ekipa2combo
+            // 
+            this.ekipa2combo.FormattingEnabled = true;
+            this.ekipa2combo.Location = new System.Drawing.Point(169, 58);
+            this.ekipa2combo.Name = "ekipa2combo";
+            this.ekipa2combo.Size = new System.Drawing.Size(222, 21);
+            this.ekipa2combo.TabIndex = 10;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(169, 110);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(222, 20);
+            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(169, 85);
+            this.maskedTextBox1.Mask = "90:00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(37, 20);
+            this.maskedTextBox1.TabIndex = 12;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
             // dodajTekmo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 214);
+            this.ClientSize = new System.Drawing.Size(403, 214);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.ekipa2combo);
+            this.Controls.Add(this.ekipa1combo);
             this.Controls.Add(this.dodajButton);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "dodajTekmo";
             this.Text = "dodajTekmo";
+            this.Load += new System.EventHandler(this.dodajTekmo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,10 +147,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button dodajButton;
+        private System.Windows.Forms.ComboBox ekipa1combo;
+        private System.Windows.Forms.ComboBox ekipa2combo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

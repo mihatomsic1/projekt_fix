@@ -25,6 +25,7 @@ namespace liga
 
         private void regButton_Click(object sender, EventArgs e)
         {
+            
             string up_ime = userTextbox.Text;
             string email = emailTextbox.Text;
             string geslo = gesloTextbox.Text;

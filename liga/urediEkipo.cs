@@ -64,5 +64,26 @@ namespace liga
             this.Hide();
             ekipe.Show();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ime1 = comboBox1.SelectedItem.ToString();
+            con.Open();
+            MySqlCommand com = con.CreateCommand();
+            com.CommandType = CommandType.Text;
+            com.CommandText = "SELECT ime, naslov, leto_ustanovitve, trener FROM ekipe WHERE ime = '"+ime1+"'";
+            com.ExecuteNonQuery();
+            MySqlDataReader reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                imeTextbox.Text = reader.GetString("ime");
+                mestoTextbox.Text = reader.GetString("naslov");
+                letoTextbox.Text = reader.GetString("leto_ustanovitve");
+                trenerTextbox.Text = reader.GetString("trener");
+            }
+            
+            con.Close();
+            com.Dispose();
+        }
     }
 }
